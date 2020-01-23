@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="/data.js"></script>
+<!-- <script var maps=data.json ></script> -->
+
+<head>
+  <meta charset="utf-8" />
+  <title>POE Atlas Calculator</title>
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+  <div class="form"><br>
+    <h3>Enter choices here:</h3>
+    <form>
+      <fieldset>
+        <legend>Focus-Farm</legend>
+        <label>Map Name:
+          <input type="text" name="focus_map"><br>
+          <label>Watchstones in Region:<br>
+            <input onchange="focus_farm(watchstone_count, focus_map, maps)" type="radio" name="watchstone_count" value="0">0
+            <input onchange="focus_farm(watchstone_count, focus_map, maps)" type="radio" name="watchstone_count" value="1">1
+            <input onchange="focus_farm(watchstone_count, focus_map, maps)" type="radio" name="watchstone_count" value="2">2
+            <input onchange="focus_farm(watchstone_count, focus_map, maps)" type="radio" name="watchstone_count" value="3">3
+            <input onchange="focus_farm(watchstone_count, focus_map, maps)" type="radio" name="watchstone_count"
+              value="4">4<br>
+            <input onchange="focus_farm(watchstone_count, focus_map, maps)" type="radio" name="watchstone_count" value="5">All
+            Tiers<br>
+            <button type="button" onclick="focus_farm(watchstone_count, focus_map, maps)">Show Connected Maps
+              Only</button><br>
+      </fieldset>
+      <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+    </form>
+  </div>
+  <div class="result">
+    <table id="my_table" class="table">
+    </table>
+  </div>
+</body>
+
+<script>
+  var local_data = maps;
+  var row_data = '';
+  for (var i = 0; i < local_data.length; i++) {
+    var row_data = row_data + '<tr>' +
+      ' <th class="region_name" rowspan=7>' + local_data[i].regionname + '</th>' +
+      ' <th class="map_name" colspan=2>' + local_data[i].name + '</th>' + ' </tr> <tr>' +
+      ' <th>Tier</th><th>Connections</th></tr> <tr>' +
+      ' <td>' + local_data[i].tier0 + '</td> <td>' + local_data[i].watchstones_0 + '</td> </tr> <tr>' +
+      ' <td>' + local_data[i].tier1 + '</td> <td>' + local_data[i].watchstones_1 + '</td> </tr> <tr>' +
+      ' <td>' + local_data[i].tier2 + '</td> <td>' + local_data[i].watchstones_2 + '</td> </tr> <tr>' +
+      ' <td>' + local_data[i].tier3 + '</td> <td>' + local_data[i].watchstones_3 + '</td> </tr> <tr>' +
+      ' <td>' + local_data[i].tier4 + '</td> <td>' + local_data[i].watchstones_4 + '</td> </tr> <tr>' +
+      '</tr>';
+  }
+  var table_body_element = document.createElement('tbody');
+  table_body_element.innerHTML = row_data;
+  document.getElementById('my_table').appendChild(table_body_element);
+</script>
+<script>
+  function focus_farm(watchstone_count, focus_map, maps) {
+    var local_data = maps;
+    var map_list = [];
+    var row_data = '';
+    if (watchstone_count == 0) {
+      map_list = maps.filter(conn_at_no_watchstones);
+      row_data = map_list.toString();
+    } else {
+
+    }
+    var table_body_element = document.createElement('tbody');
+    table_body_element.innerHTML = row_data;
+    document.getElementById('my_table').appendChild(table_body_element);
+
+  }
+  function conn_at_no_watchstones(value) {
+    if (value.watchstones_0.includes(map_name)) {
+      return value;
+    }
+
+  }
+</script>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>POE Atlas Calculator</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+  </head>
+  <body >
+    <div class="form"><br>
+        <h3>Enter choices here:</h3>
+    <form>
+    <fieldset>
+    <legend >Focus-Farm</legend>
+    <label>Map Name: 
+    <input type="text" name="focus_map" ><br>
+    <label>Watchstones in Region: 
+    <input onchange="" type="radio" name="watchstone_count" value="0">0
+    <input onchange="" type="radio" name="watchstone_count" value="1">1
+    <input onchange="" type="radio" name="watchstone_count" value="2">2
+    <input onchange="" type="radio" name="watchstone_count" value="3">3
+    <input onchange="" type="radio" name="watchstone_count" value="4">4<br>
+    <button type="button" onclick="">Show Only Connected Maps</button><br>
+    </fieldset>
+    <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+    </form>
+    </div>
+    <div class="result">
+    </div>
+    {% block content %}{% endblock content %}
+  </body>
+</html>
+<script>
+  document.getElementById("demo").innerHTML = "Hello JavaScript!";
+</script>

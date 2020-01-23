@@ -1,0 +1,93 @@
+{% extends "base" %}
+
+{% block content %}
+{% set var = "Tirns End"%}
+{% set ws_level = "1"%}
+    <h3>Here are your items:</h3>
+    <script type="text/javascript" src="/database.json"></script>
+    <ul>
+        <table  >
+        {# border="1" style="border-color: black" #}
+            <thead>
+            <tr>
+                {# <th>Name</th>
+                <th>Tier</th>
+                <th colspan:6>Connections</th> #}
+                {# <th colspan=8 class="region_name">{{var}}</th> #}
+            </tr>
+            </thead>
+            <tbody >
+            {% for map in maps %}
+            {# {% if map.regionname == var %} #}
+            <tr>
+                <th rowspan=7>{{map.regionname}}</th>
+
+                <th class="map_name" colspan=3>{{map.name}}</th>
+            </tr>
+            <tr>
+                {# <th></th> #}
+                <th class="tier">Tier</th>
+                <th colspan=7>Connections</th>
+            </tr>
+            <tr>
+                {# <th></th> #}
+                <td>{{map.tier0}}</td>
+                {% for stone in [0, 1, 2, 3, 4, 5, 6] %}
+                {% if map.watchstones_0[loop.index] %}
+                <td>{{map.watchstones_0[loop.index]}}</td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                {% endfor %}
+            </tr>
+            <tr>
+                {# <th></th> #}
+                <td>{{map.tier1}}</td>
+                {% for stone in [0, 1, 2, 3, 4, 5, 6] %}
+                {% if map.watchstones_1[loop.index] %}
+                <td>{{map.watchstones_1[loop.index]}}</td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                {% endfor %}
+            </tr>
+            <tr>
+                {# <th>{{map.regionname}}</th> #}
+                {# <th></th> #}
+                <td>{{map.tier2}}</td>
+                {% for stone in [0, 1, 2, 3, 4, 5, 6] %}
+                {% if map.watchstones_2[loop.index] %}
+                <td>{{map.watchstones_2[loop.index]}}</td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                {% endfor %}
+            </tr>
+            <tr>
+                {# <th></th> #}
+                <td>{{map.tier3}}</td>
+                {% for stone in [0, 1, 2, 3, 4, 5, 6] %}
+                {% if map.watchstones_3[loop.index] %}
+                <td>{{map.watchstones_3[loop.index]}}</td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                {% endfor %}
+            </tr>
+            <tr>
+                {# <th></th> #}
+                <td>{{map.tier4}}</td>
+                {% for stone in [0, 1, 2, 3, 4, 5, 6] %}
+                {% if map.watchstones_4[loop.index] %}
+                <td>{{map.watchstones_4[loop.index]}}</td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                {% endfor %}
+            </tr>
+            {# {% endif %} #}
+            {% endfor %}
+            </tbody>
+        </table>
+    </ul>
+{% endblock content %}
