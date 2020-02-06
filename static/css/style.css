@@ -50,3 +50,6 @@ thead {
 .tier {
   width: 40px;
 }
+.plot {
+   float: right;
+}
