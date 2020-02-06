@@ -1,3 +1,93 @@
+var maps_two = [
+    {
+        "name": "Armoury",
+        "regionname": "Glennach Cairns",
+        "tier0": 2,
+        "tier1": 5,
+        "tier2": 9,
+        "tier3": 11,
+        "tier4": 14,
+        "watchstones_0": [
+            "Beach",
+            "Arcade",
+            "Glacier",
+            "Vault",
+            "Racecourse"
+        ],
+        "watchstones_1": [
+            "Beach",
+            "Marshes",
+            "Arcade",
+            "Glacier",
+            "Vault",
+            "Racecourse"
+        ],
+        "watchstones_2": [
+            "Beach",
+            "Arcade",
+            "Glacier",
+            "Vault",
+            "Racecourse"
+        ],
+        "watchstones_3": [
+            "Beach",
+            "Dungeon",
+            "Arcade",
+            "Glacier",
+            "Vault",
+            "Racecourse"
+        ],
+        "watchstones_4": [
+            "Dungeon",
+            "Arcade",
+            "Glacier",
+            "Vault",
+            "Racecourse"
+        ]
+    },
+    {
+        "name": "Beach",
+        "regionname": "Glennach Cairns",
+        "tier0": 1,
+        "tier1": 4,
+        "tier2": 8,
+        "tier3": 10,
+        "tier4": 14,
+        "watchstones_0": [
+            "Fungal Hollow",
+            "Sulphur Vents",
+            "Armoury"
+        ],
+        "watchstones_1": [
+            "Marshes",
+            "Fungal Hollow",
+            "Sulphur Vents",
+            "Armoury"
+        ],
+        "watchstones_2": [
+            "Marshes",
+            "Fungal Hollow",
+            "Sulphur Vents",
+            "Armoury"
+        ],
+        "watchstones_3": [
+            "Dungeon",
+            "Marshes",
+            "Fungal Hollow",
+            "Sulphur Vents",
+            "Armoury"
+        ],
+        "watchstones_4": [
+            "Dungeon",
+            "Marshes",
+            "Fungal Hollow",
+            "Sulphur Vents",
+            "Spider Lair"
+        ]
+    }
+];
+
+
 var maps = [
         {
             "name": "Armoury",

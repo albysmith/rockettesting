@@ -1,0 +1,72 @@
+html {
+  background-color: rgb(30, 30, 30);
+}
+body {
+  margin: 20px auto;
+  color: lightslategray;
+  font-family: fantasy;
+  max-width: 1000px;
+  line-height: 1.6;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+td {
+  min-height: 80px;
+}
+thead th {
+  border-bottom: 5px solid black;
+}
+thead {
+  color: aliceblue;
+  font-size: 12px;
+}
+.form {
+  color: lightslategray;
+  margin: 6px;
+  padding: 6px;
+  width: 25%;
+  float: left;
+}
+.result {
+  /* background-color: rgb(40, 40, 40); */
+  color: lightslategray;
+  margin: 6px;
+  padding: 6px;
+  width: 70%;
+  float: left;
+}
+.map_name {
+  font-size: 25px;
+  border-top: 5px solid black;
+  color: darkolivegreen;
+}
+.region_name {
+  color: darkslategray;
+  font-size: 20px;
+  border-top: 5px solid black;
+  orientation: sideways;
+}
+.tier {
+  width: 40px;
+}
+.sort_descending {
+  /* up tik */
+  width: 10px;
+  height: 10px;
+  /* float: inline-end; */
+  
+}
+.sort_ascending {
+  /* down tik */
+  width: 10px;
+  height: 10px;
+  /* float: inline-end; */
+}
+.header {
+  /* float: left; */
+}
+.buttons {
+  float: inline-end;
+}

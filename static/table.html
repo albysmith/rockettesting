@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Table Testing</title>
+    <link rel="stylesheet" type="text/css" href="/css/table.css">
+</head>
+
+
+<body>
+
+    <table>
+        <caption>First Way</caption>
+        <!-- <colgroup>
+            <col span="2" class="region_name">
+        </colgroup> -->
+        <thead>
+            <tr>
+                <th class="header">Header 1
+                        <input type="image" class="sort_descending" src="/icons/descending-bluegray.png"
+                            onclick="alert('Hello World!')">
+                        <input type="image" class="sort_ascending" src="/icons/ascending-bluegray.png"
+                            onclick="alert('Hello World!')">
+                </th>
+                <th class="header">Header 2
+                        <input type="image" class="sort_descending" src="/icons/descending-bluegray.png"
+                            onclick="alert('Hello World!')">
+                        <input type="image" class="sort_ascending" src="/icons/ascending-bluegray.png"
+                            onclick="alert('Hello World!')">
+                </th>
+                <th class="header">Header 3
+                        <input type="image" class="sort_descending" src="/icons/descending-bluegray.png"
+                            onclick="alert('Hello World!')">
+                        <input type="image" class="sort_ascending" src="/icons/ascending-bluegray.png"
+                            onclick="alert('Hello World!')">
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>adata</td>
+                <td>data</td>
+                <td>data</td>
+            </tr>
+            <tr>
+                <td>bdata</td>
+                <td>data</td>
+                <td>data</td>
+            </tr>
+            <tr>
+                <td>cdata</td>
+                <td>data</td>
+                <td>data</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+<script>
+    function initialize(header = { "column": 5, "row": 10, "depth": 3, "alignment": "top", "headers": ["id", "name"] }, data) {
+        switch (header.alignment) {
+            case 'top':
+                alignment_top();
+                break;
+            case 'left':
+                alignment_left();
+                break;
+        }
+    }
+
+    function alignment_top() {
+
+    }
+
+    function alignment_left() {
+
+    }
+
+    function create_sort_buttons(header, index) {
+        // create buttons to sort table
+        var sort_buttons = String(`<div class="buttons"><button type="button" class="sort_descending" onclick="call_sort_des(${index})"></button><button type="button" class="sort_ascending" onclick="call_sort_asc(${index})"></button></div>`);
+
+    }
+</script>
+
+
+</html>

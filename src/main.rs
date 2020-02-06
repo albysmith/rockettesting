@@ -4,6 +4,8 @@
 extern crate rocket;
 #[macro_use]
 extern crate serde_derive;
+#[macro_use]
+extern crate bson;
 
 use std::io;
 
@@ -19,7 +21,6 @@ use rocket_contrib::templates::Template;
 
 use std::collections::HashMap;
 
-use postgres::{Client, NoTls};
 use rocket::response::Redirect;
 use rocket::Request;
 use rocket_contrib::serve::StaticFiles;
@@ -28,6 +29,9 @@ use std::fs;
 use std::fs::File;
 // use std::io;
 use std::io::Write;
+
+use bson::{decode_document, encode_document, Bson, Document};
+use mongodb::{options::ClientOptions, Client};
 
 #[derive(Debug, FromFormValue)]
 enum FormOption {
@@ -89,15 +93,15 @@ struct FormInput<'r> {
 //     rocket().launch();
 // }
 
-mod atlas;
+// mod atlas;
 mod static_file;
-use atlas::*;
-mod sql_import;
-use json_import::*;
-mod json_import;
-use sql_import::*;
-mod templating;
-use templating::*;
+// use atlas::*;
+// mod sql_import;
+// use json_import::*;
+// mod json_import;
+// use sql_import::*;
+// mod templating;
+// use templating::*;
 
 #[derive(Serialize)]
 struct TemplateContext {
@@ -108,7 +112,10 @@ struct TemplateContext {
 #[get("/")]
 fn base() -> io::Result<NamedFile> {
     NamedFile::open("static/base.html")
-
+}
+#[get("/testing")]
+fn test() -> io::Result<NamedFile> {
+    NamedFile::open("static/table.html")
 }
 
 // #[get("/hello/<name>")]
@@ -148,11 +155,42 @@ fn not_found(req: &Request<'_>) -> Template {
 
 fn rocket() -> rocket::Rocket {
     rocket::ignite()
-        .mount("/", routes![base, static_file::all])
+        .mount("/", routes![base, test, static_file::all])
         .attach(Template::fairing())
         .register(catchers![not_found])
 }
 
+#[derive(Deserialize, Serialize, Debug, Clone)]
+struct Json {
+    string: String,
+}
+
 fn main() {
     rocket().launch();
+    // let json: Json = Json{ string: fs::read_to_string("src/x4_wares.json").unwrap()};
+    // let bson = Bson::String(json.string.to_owned());
+    // println!("{:#?}", bson);
+    // let mut doc = Document::new();
+    // doc.insert("wares".to_owned(), bson);
+
+    let client = Client::with_uri_str("mongodb://localhost:27017/").unwrap();
+    let db = client.database("X4");
+
+    // db.create_collection("Test", None);
+    // let coll = db.collection("Test");
+    // coll.insert_one(doc, None);
+    // println!("{:#?}", coll);
+
+    // for coll_name in db.list_collection_names(None) {
+    //     println!("collection: {:#?}", coll_name);
+    // }
+
+    // let coll = db.collection("Wares");
+    // // let result = coll.insert_one(doc! { "x": 1 }, None);
+    // let info = coll.find_one(doc! { "advancedelectronics.id" : "advancedelectronics" }, None).unwrap().unwrap();
+    // for thing in info.iter() {
+    //     println!("{:#?}", thing)
+    // }
+    // let mut buffer = File::create("pizza").unwrap();
+    // buffer.write_all(info.to_string().as_bytes()).unwrap();
 }

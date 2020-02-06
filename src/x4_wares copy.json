@@ -1,0 +1,348 @@
+{
+    "advancedcomposites": {
+        {
+            "key": "id",
+            "value": "advancedcomposites"
+        },
+        {
+            "key": "name",
+            "value": "{20201,401}"
+        },
+        {
+            "key": "description",
+            "value": "{20201,402}"
+        },
+        {
+            "key": "factoryname",
+            "value": "{20201,404}"
+        },
+        {
+            "key": "group",
+            "value": "hightech"
+        },
+        {
+            "key": "transport",
+            "value": "container"
+        },
+        {
+            "key": "volume",
+            "value": "32"
+        },
+        {
+            "key": "tags",
+            "value": "container economy"
+        },
+        {
+            "key": "min",
+            "value": "432"
+        },
+        {
+            "key": "average",
+            "value": "540"
+        },
+        {
+            "key": "max",
+            "value": "648"
+        },
+        {
+            "key": "time",
+            "value": "300"
+        },
+        {
+            "key": "amount",
+            "value": "60"
+        },
+        {
+            "key": "method",
+            "value": "default"
+        },
+        {
+            "key": "name",
+            "value": "{20206,101}"
+        },
+        {
+            "key": "ware",
+            "value": "energycells"
+        },
+        {
+            "key": "amount",
+            "value": "50"
+        },
+        {
+            "key": "ware",
+            "value": "graphene"
+        },
+        {
+            "key": "amount",
+            "value": "80"
+        },
+        {
+            "key": "ware",
+            "value": "refinedmetals"
+        },
+        {
+            "key": "amount",
+            "value": "80"
+        },
+        {
+            "key": "type",
+            "value": "work"
+        },
+        {
+            "key": "product",
+            "value": "0.2"
+        },
+        {
+            "key": "time",
+            "value": "300"
+        },
+        {
+            "key": "amount",
+            "value": "60"
+        },
+        {
+            "key": "method",
+            "value": "teladi"
+        },
+        {
+            "key": "name",
+            "value": "{20206,401}"
+        },
+        {
+            "key": "ware",
+            "value": "energycells"
+        },
+        {
+            "key": "amount",
+            "value": "50"
+        },
+        {
+            "key": "ware",
+            "value": "graphene"
+        },
+        {
+            "key": "amount",
+            "value": "80"
+        },
+        {
+            "key": "ware",
+            "value": "teladianium"
+        },
+        {
+            "key": "amount",
+            "value": "58"
+        },
+        {
+            "key": "type",
+            "value": "work"
+        },
+        {
+            "key": "product",
+            "value": "0.2"
+        },
+        {
+            "key": "active",
+            "value": "ware_advancedcomposites"
+        },
+        {
+            "key": "video",
+            "value": "ware_advancedcomposites_macro"
+        }
+    ,
+    "advancedelectronics": {
+        {
+            "key": "id",
+            "value": "advancedelectronics"
+        },
+        {
+            "key": "name",
+            "value": "{20201,101}"
+        },
+        {
+            "key": "description",
+            "value": "{20201,102}"
+        },
+        {
+            "key": "factoryname",
+            "value": "{20201,104}"
+        },
+        {
+            "key": "group",
+            "value": "shiptech"
+        },
+        {
+            "key": "transport",
+            "value": "container"
+        },
+        {
+            "key": "volume",
+            "value": "30"
+        },
+        {
+            "key": "tags",
+            "value": "container economy stationbuilding"
+        },
+        {
+            "key": "min",
+            "value": "710"
+        },
+        {
+            "key": "average",
+            "value": "1014"
+        },
+        {
+            "key": "max",
+            "value": "1318"
+        },
+        {
+            "key": "time",
+            "value": "720"
+        },
+        {
+            "key": "amount",
+            "value": "60"
+        },
+        {
+            "key": "method",
+            "value": "default"
+        },
+        {
+            "key": "name",
+            "value": "{20206,101}"
+        },
+        {
+            "key": "ware",
+            "value": "energycells"
+        },
+        {
+            "key": "amount",
+            "value": "60"
+        },
+        {
+            "key": "ware",
+            "value": "microchips"
+        },
+        {
+            "key": "amount",
+            "value": "44"
+        },
+        {
+            "key": "ware",
+            "value": "quantumtubes"
+        },
+        {
+            "key": "amount",
+            "value": "20"
+        },
+        {
+            "key": "type",
+            "value": "work"
+        },
+        {
+            "key": "product",
+            "value": "0.22"
+        },
+        {
+            "key": "active",
+            "value": "ware_advancedelectronics"
+        },
+        {
+            "key": "video",
+            "value": "ware_advancedelectronics_macro"
+        }
+    ,
+    "antimattercells": {
+        {
+            "key": "id",
+            "value": "antimattercells"
+        },
+        {
+            "key": "name",
+            "value": "{20201,201}"
+        },
+        {
+            "key": "description",
+            "value": "{20201,202}"
+        },
+        {
+            "key": "factoryname",
+            "value": "{20201,204}"
+        },
+        {
+            "key": "group",
+            "value": "refined"
+        },
+        {
+            "key": "transport",
+            "value": "container"
+        },
+        {
+            "key": "volume",
+            "value": "18"
+        },
+        {
+            "key": "tags",
+            "value": "container economy"
+        },
+        {
+            "key": "min",
+            "value": "121"
+        },
+        {
+            "key": "average",
+            "value": "202"
+        },
+        {
+            "key": "max",
+            "value": "282"
+        },
+        {
+            "key": "time",
+            "value": "120"
+        },
+        {
+            "key": "amount",
+            "value": "110"
+        },
+        {
+            "key": "method",
+            "value": "default"
+        },
+        {
+            "key": "name",
+            "value": "{20206,101}"
+        },
+        {
+            "key": "ware",
+            "value": "energycells"
+        },
+        {
+            "key": "amount",
+            "value": "100"
+        },
+        {
+            "key": "ware",
+            "value": "hydrogen"
+        },
+        {
+            "key": "amount",
+            "value": "320"
+        },
+        {
+            "key": "type",
+            "value": "work"
+        },
+        {
+            "key": "product",
+            "value": "0.21"
+        },
+        {
+            "key": "active",
+            "value": "ware_antimattercells"
+        },
+        {
+            "key": "video",
+            "value": "ware_antimattercells_macro"
+        }
+    
+}
